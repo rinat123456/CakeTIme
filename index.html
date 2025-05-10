@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>האתר של רינת - מערכת ויזואליזציה למאפים</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #B3E5FC, #F0F4FF);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #0288D1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        p.intro {
+            font-size: 1.2em;
+            color: #0277BD;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #4FC3F7, #B3E5FC);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(45deg, #81D4FA, #E1F5FE);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .bakery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .bakery-image:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #0277BD;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>האתר של רינת: מערכת ויזואליזציה למאפים</h1>
+            <p class="intro">
+                ברוכים הבאים למערכת הוויזואלית של רינת, המיועדת לספק תובנות מדויקות על עולם המאפים! כאן תמצאו ניתוחים ויזואליים של נתוני מכירות, מחירים וסוגי מאפים, הכל מוצג בצורה ברורה וידידותית כדי לעזור לעסק שלכם לפרוח.
+            </p>
+        </header>
+
+        <div class="section">
+            <p>
+                גלו את מגוון המאפים המרהיב שלנו, מעוגות מפנקות ועד קרואסונים פריכים!
+            </p>
+            <div class="gallery">
+                <img src="https://www.roladin.co.il/wp-content/uploads/2020/01/%D7%9E%D7%90%D7%A4%D7%99%D7%9D-%D7%9E%D7%AA%D7%95%D7%A7%D7%99%D7%9D.jpg" alt="מאפים מתוקים" class="bakery-image">
+                <img src="https://www.roladin.co.il/wp-content/uploads/2020/01/%D7%9E%D7%90%D7%A4%D7%99%D7%9D-%D7%9E%D7%9C%D7%95%D7%97%D7%99%D7%9D-1-768x512.jpg" alt="מאפים מלוחים" class="bakery-image">
+                <img src="https://www.stella-bakery.co.il/wp-content/uploads/2021/06/tal-zelicovitch-175.jpg" alt="מאפים מיוחדים" class="bakery-image">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="dash1.html" class="btn">אזור מכירה וערוצי הקנייה האפשריים</a>
+            <a href="dash2.html" class="btn">מחירי מאפה והערכת מאפה</a>
+            <a href="dash3.html" class="btn">סוגי מאפים</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Rinat's Visualization System | Built with ❤️ & ☕</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links (if added later)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
